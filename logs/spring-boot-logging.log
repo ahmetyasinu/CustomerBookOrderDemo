@@ -1,0 +1,95 @@
+2022-03-03 20:58:28,925 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 11548 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-03 20:58:28,925 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-03 20:58:28,925 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "prod"
+2022-03-03 20:58:33,441 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-03 20:58:37,740 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        login0_.id as id1_0_,
+        login0_.created_by as created_2_0_,
+        login0_.created_date as created_3_0_,
+        login0_.deleted as deleted4_0_,
+        login0_.deleted_date as deleted_5_0_,
+        login0_.last_modified_by as last_mod6_0_,
+        login0_.last_modified_date as last_mod7_0_,
+        login0_.version as version8_0_,
+        login0_.password as password9_0_,
+        login0_.username as usernam10_0_ 
+    from
+        login login0_
+2022-03-03 20:58:40,483 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 13.139 seconds (JVM running for 15.907)
+2022-03-03 21:02:35,530 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 11596 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-03 21:02:35,538 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-03 21:02:35,538 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "prod"
+2022-03-03 21:02:40,800 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-03 21:02:45,534 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        login0_.id as id1_0_,
+        login0_.created_by as created_2_0_,
+        login0_.created_date as created_3_0_,
+        login0_.deleted as deleted4_0_,
+        login0_.deleted_date as deleted_5_0_,
+        login0_.last_modified_by as last_mod6_0_,
+        login0_.last_modified_date as last_mod7_0_,
+        login0_.version as version8_0_,
+        login0_.password as password9_0_,
+        login0_.username as usernam10_0_ 
+    from
+        login login0_
+2022-03-03 21:02:48,351 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 14.363 seconds (JVM running for 16.89)
+2022-03-03 21:03:51,829 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 4924 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-03 21:03:51,837 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-03 21:03:51,837 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "prod"
+2022-03-03 21:03:56,455 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-03 21:04:01,190 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        login0_.id as id1_0_,
+        login0_.created_by as created_2_0_,
+        login0_.created_date as created_3_0_,
+        login0_.deleted as deleted4_0_,
+        login0_.deleted_date as deleted_5_0_,
+        login0_.last_modified_by as last_mod6_0_,
+        login0_.last_modified_date as last_mod7_0_,
+        login0_.version as version8_0_,
+        login0_.password as password9_0_,
+        login0_.username as usernam10_0_ 
+    from
+        login login0_
+2022-03-03 21:04:03,938 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 13.785 seconds (JVM running for 16.247)
+2022-03-03 21:04:33,971 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 6068 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-03 21:04:33,980 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-03 21:04:33,980 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "prod"
+2022-03-03 21:04:38,259 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-03 21:04:42,267 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        login0_.id as id1_0_,
+        login0_.created_by as created_2_0_,
+        login0_.created_date as created_3_0_,
+        login0_.deleted as deleted4_0_,
+        login0_.deleted_date as deleted_5_0_,
+        login0_.last_modified_by as last_mod6_0_,
+        login0_.last_modified_date as last_mod7_0_,
+        login0_.version as version8_0_,
+        login0_.password as password9_0_,
+        login0_.username as usernam10_0_ 
+    from
+        login login0_
+2022-03-03 21:04:44,841 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 12.058 seconds (JVM running for 14.383)
+2022-03-03 21:04:58,599 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 3228 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-03 21:04:58,607 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-03 21:04:58,607 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "prod"
+2022-03-03 21:05:04,323 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-03 21:05:09,524 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        login0_.id as id1_0_,
+        login0_.created_by as created_2_0_,
+        login0_.created_date as created_3_0_,
+        login0_.deleted as deleted4_0_,
+        login0_.deleted_date as deleted_5_0_,
+        login0_.last_modified_by as last_mod6_0_,
+        login0_.last_modified_date as last_mod7_0_,
+        login0_.version as version8_0_,
+        login0_.password as password9_0_,
+        login0_.username as usernam10_0_ 
+    from
+        login login0_
+2022-03-03 21:05:12,658 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 16.022 seconds (JVM running for 18.476)
