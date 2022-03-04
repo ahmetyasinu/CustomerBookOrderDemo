@@ -1,7 +1,7 @@
 package com.ahmetyasin.demogetir.controller;
 
-import com.ahmetyasin.demogetir.entity.Login;
-import com.ahmetyasin.demogetir.service.UserServiceImpl;
+import com.ahmetyasin.demogetir.entity.User;
+import com.ahmetyasin.demogetir.service.Impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserController {
     @RequestMapping("/save")
     @PostMapping
     @ApiOperation(value = "Login Entry",notes = "Login Create RestApi")
-    public void UserController(@RequestBody Login login){
-        userServiceImpl.save(login);
+    public void UserController(@RequestBody User user){
+        userServiceImpl.save(user);
     }
 }

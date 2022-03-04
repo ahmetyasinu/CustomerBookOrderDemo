@@ -15,7 +15,7 @@
         login0_.password as password9_0_,
         login0_.username as usernam10_0_ 
     from
-        login login0_
+        user login0_
 2022-03-03 20:58:40,483 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 13.139 seconds (JVM running for 15.907)
 2022-03-03 21:02:35,530 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 11596 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
 2022-03-03 21:02:35,538 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
@@ -34,7 +34,7 @@
         login0_.password as password9_0_,
         login0_.username as usernam10_0_ 
     from
-        login login0_
+        user login0_
 2022-03-03 21:02:48,351 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 14.363 seconds (JVM running for 16.89)
 2022-03-03 21:03:51,829 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 4924 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
 2022-03-03 21:03:51,837 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
@@ -53,7 +53,7 @@
         login0_.password as password9_0_,
         login0_.username as usernam10_0_ 
     from
-        login login0_
+        user login0_
 2022-03-03 21:04:03,938 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 13.785 seconds (JVM running for 16.247)
 2022-03-03 21:04:33,971 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 6068 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
 2022-03-03 21:04:33,980 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
@@ -72,7 +72,7 @@
         login0_.password as password9_0_,
         login0_.username as usernam10_0_ 
     from
-        login login0_
+        user login0_
 2022-03-03 21:04:44,841 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 12.058 seconds (JVM running for 14.383)
 2022-03-03 21:04:58,599 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 3228 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
 2022-03-03 21:04:58,607 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
@@ -91,5 +91,5 @@
         login0_.password as password9_0_,
         login0_.username as usernam10_0_ 
     from
-        login login0_
+        user login0_
 2022-03-03 21:05:12,658 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 16.022 seconds (JVM running for 18.476)

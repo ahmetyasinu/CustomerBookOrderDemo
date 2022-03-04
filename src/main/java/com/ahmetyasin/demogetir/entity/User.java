@@ -3,14 +3,13 @@ package com.ahmetyasin.demogetir.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
 @Entity
 @Table(name = "Login")
 @ApiModel(value = "Login",description = "Login Entity")
-public class Login  extends BaseEntity<Integer> {
+public class User extends BaseEntity<Integer> {
 
     @Id
     @Column(name = "id")
@@ -24,10 +23,10 @@ public class Login  extends BaseEntity<Integer> {
     @Column(name = "password")
     private String password;
 
-    public Login() {
+    public User() {
     }
 
-    public Login(String username, String password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }

@@ -1,7 +1,8 @@
-package com.ahmetyasin.demogetir.service;
+package com.ahmetyasin.demogetir.service.Impl;
 
-import com.ahmetyasin.demogetir.entity.Login;
-import com.ahmetyasin.demogetir.repository.UserRepositoryInterface;
+import com.ahmetyasin.demogetir.entity.User;
+import com.ahmetyasin.demogetir.repository.IUserRepository;
+import com.ahmetyasin.demogetir.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,33 +12,33 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserRepositoryInterface userRepository;
+    IUserRepository userRepository;
 
 
     @Override
-    public List<Login> findAll() {
+    public List<User> findAll() {
 
         return this.userRepository.findAll();
     }
 
     @Override
-    public Login findById(int id) {
-        Optional<Login> result = userRepository.findById(id);
-        Login login = null;
+    public User findById(int id) {
+        Optional<User> result = userRepository.findById(id);
+        User user = null;
 
         if (result.isPresent()) {
-            login = result.get();
+            user = result.get();
         } else {
             // we didn't find the employee
             throw new RuntimeException("Did not find employee id - " + id);
         }
 
-        return login;
+        return user;
     }
 
     @Override
-    public void save(Login login) {
-        userRepository.save(login);
+    public void save(User user) {
+        userRepository.save(user);
 
     }
 
@@ -48,8 +49,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void update(Login login, int id) {
-        userRepository.save(login);
+    public void update(User user, int id) {
+        userRepository.save(user);
     }
 
 

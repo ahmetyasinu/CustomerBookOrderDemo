@@ -7,10 +7,9 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 
 
-import com.ahmetyasin.demogetir.entity.Login;
+import com.ahmetyasin.demogetir.entity.User;
 import com.ahmetyasin.demogetir.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -29,10 +28,10 @@ public class UserDetailsService implements org.springframework.security.core.use
 
     @PostConstruct
     public void init() {
-        List<Login> logins = userService.findAll();
+        List<User> users = userService.findAll();
 
-        for (Login item : logins) {
-            users.put(item.getUsername(), bCryptPasswordEncoder.encode(item.getPassword()));
+        for (User item : users) {
+            this.users.put(item.getUsername(), bCryptPasswordEncoder.encode(item.getPassword()));
         }
 
     }
@@ -42,7 +41,7 @@ public class UserDetailsService implements org.springframework.security.core.use
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         if (users.containsKey(username)) {
-            return new User(username, users.get(username), new ArrayList<>());
+            return new org.springframework.security.core.userdetails.User(username, users.get(username), new ArrayList<>());
         }
 
         throw new UsernameNotFoundException(username);

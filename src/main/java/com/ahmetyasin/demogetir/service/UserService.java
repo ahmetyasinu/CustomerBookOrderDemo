@@ -1,14 +1,15 @@
 package com.ahmetyasin.demogetir.service;
 
-import com.ahmetyasin.demogetir.entity.Login;
+import com.ahmetyasin.demogetir.entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public interface UserService {
 
-    public List<Login> findAll();
-    public Login findById(int id);
-    public void save(Login login);
+    public List<User> findAll();
+    public User findById(int id);
+    public void save(User user);
     public void deleteById(int id);
-    public void update(Login login,int id);
+    public void update(User user, int id);
 }

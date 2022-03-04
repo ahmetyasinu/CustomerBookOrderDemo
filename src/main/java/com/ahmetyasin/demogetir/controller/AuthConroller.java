@@ -2,7 +2,7 @@ package com.ahmetyasin.demogetir.controller;
 
 
 import com.ahmetyasin.demogetir.auth.TokenManager;
-import com.ahmetyasin.demogetir.entity.Login;
+import com.ahmetyasin.demogetir.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +26,14 @@ public class AuthConroller {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @PostMapping
-    public ResponseEntity<String> login(@RequestBody Login login) {
+    public ResponseEntity<String> login(@RequestBody User user) {
 
         try {
             logger.info("Username and Password Contol are starting");
             authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(login.getUsername(), login.getPassword()));
+                    new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 
-            return ResponseEntity.ok(tokenManager.generateToken(login.getUsername()));
+            return ResponseEntity.ok(tokenManager.generateToken(user.getUsername()));
         } catch (Exception e) {
             logger.error("Username and Password Contol Error");
 
