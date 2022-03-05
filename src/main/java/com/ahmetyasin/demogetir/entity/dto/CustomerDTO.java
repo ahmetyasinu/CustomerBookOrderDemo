@@ -1,8 +1,8 @@
 package com.ahmetyasin.demogetir.entity.dto;
 
-public class CustomerDTO {
+public class CustomerDTO extends BaseDTO<Long>{
 
-  private Integer id;
+  private Long id;
   private String name;
   private String surname;
   private String email;
@@ -11,18 +11,18 @@ public class CustomerDTO {
   public CustomerDTO() {
   }
 
-  public CustomerDTO(Integer id, String name, String surname, String email) {
+  public CustomerDTO(Long id, String name, String surname, String email) {
     this.id = id;
     this.name = name;
     this.surname = surname;
     this.email = email;
   }
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(Long id) {
     this.id = id;
   }
 

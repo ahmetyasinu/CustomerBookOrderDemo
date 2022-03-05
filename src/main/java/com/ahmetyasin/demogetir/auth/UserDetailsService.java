@@ -7,7 +7,7 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 
 
-import com.ahmetyasin.demogetir.entity.User;
+import com.ahmetyasin.demogetir.entity.dto.UserDto;
 import com.ahmetyasin.demogetir.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,9 +28,9 @@ public class UserDetailsService implements org.springframework.security.core.use
 
     @PostConstruct
     public void init() {
-        List<User> users = userService.findAll();
+        List<UserDto> users = userService.findAll();
 
-        for (User item : users) {
+        for (UserDto item : users) {
             this.users.put(item.getUsername(), bCryptPasswordEncoder.encode(item.getPassword()));
         }
 

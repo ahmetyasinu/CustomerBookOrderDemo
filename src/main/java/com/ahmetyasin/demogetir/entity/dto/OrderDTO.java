@@ -3,9 +3,9 @@ package com.ahmetyasin.demogetir.entity.dto;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class OrderDTO {
+public class OrderDTO extends BaseDTO<Long> {
 
-  private Integer id;
+  private Long id;
   private Integer customerId;
   private Integer price;
   private LocalDateTime createdAt;
@@ -14,7 +14,7 @@ public class OrderDTO {
   public OrderDTO() {
   }
 
-  public OrderDTO(Integer id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems) {
+  public OrderDTO(Long id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems) {
     this.id = id;
     this.customerId = customerId;
     this.price = price;
@@ -22,11 +22,11 @@ public class OrderDTO {
     this.orderItems = orderItems;
   }
 
-  public Integer getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(Long id) {
     this.id = id;
   }
 

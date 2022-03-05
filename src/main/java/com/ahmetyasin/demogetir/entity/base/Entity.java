@@ -1,4 +1,4 @@
-package com.ahmetyasin.demogetir.entity;
+package com.ahmetyasin.demogetir.entity.base;
 
 import java.io.Serializable;
 

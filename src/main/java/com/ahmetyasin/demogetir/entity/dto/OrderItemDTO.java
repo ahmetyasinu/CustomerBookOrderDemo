@@ -1,6 +1,6 @@
 package com.ahmetyasin.demogetir.entity.dto;
 
-public class OrderItemDTO {
+public class OrderItemDTO extends BaseDTO<Long> {
 
   private Long id;
   private String name;

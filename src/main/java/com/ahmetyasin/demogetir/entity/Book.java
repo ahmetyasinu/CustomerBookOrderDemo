@@ -1,7 +1,7 @@
 package com.ahmetyasin.demogetir.entity;
 
+import com.ahmetyasin.demogetir.entity.base.BaseEntity;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -9,12 +9,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Book")
 @ApiModel(value = "Book",description = "Book Entity")
-public class Book extends BaseEntity<Integer> {
+public class Book extends BaseEntity<Long> {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -32,7 +32,7 @@ public class Book extends BaseEntity<Integer> {
     public Book() {
     }
 
-    public Book(int id, String name, String author, Integer price, Integer stock) {
+    public Book(Long id, String name, String author, Integer price, Integer stock) {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -73,14 +73,12 @@ public class Book extends BaseEntity<Integer> {
     }
 
     @Override
-    public Integer getID() {
-        return this.id;
+    public Long getID() {
+        return id;
     }
 
     @Override
-    public void setID(Integer ID) {
-
+    public void setID(Long ID) {
+        this.id = ID;
     }
-
-
 }

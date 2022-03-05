@@ -12,9 +12,5 @@ public interface IOrderItemRepository extends BaseRepository<OrderItem> {
     /*@Query("select a from Login a where a.startDate BETWEEN :startDate and :endDate")
     List<Login> betweenDates(@Param("startDate") String startDate, @Param("endDate") String endDate);*/
 
-    Optional<OrderItem> findByIdAndOrderItemId(Integer id, Integer orderItemId);
 
-    List<OrderItem> findAllByCreatedAtBetweenAndOrderItemId(LocalDateTime startDate, LocalDateTime endDate, Integer orderItemId);
-
-    List<OrderItem> findAllByOrderItemId(Integer customerId);
 }

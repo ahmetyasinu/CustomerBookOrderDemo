@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Column;
 
-public class UserDto {
+public class UserDto  extends BaseDTO<Long>{
 
 
     private String username;
@@ -34,5 +34,15 @@ public class UserDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public Long getId() {
+        return null;
+    }
+
+    @Override
+    public void setId(Long id) {
+
     }
 }

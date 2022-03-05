@@ -1,6 +1,7 @@
 package com.ahmetyasin.demogetir.mapper;
 
-import com.ahmetyasin.demogetir.entity.BaseEntity;
+
+import com.ahmetyasin.demogetir.entity.base.BaseEntity;
 import com.ahmetyasin.demogetir.entity.dto.BaseDTO;
 import ma.glasnost.orika.CustomConverter;
 import ma.glasnost.orika.MapperFacade;
@@ -71,5 +72,4 @@ public class MapperHelper {
 		}
 
 	}
-
 }
