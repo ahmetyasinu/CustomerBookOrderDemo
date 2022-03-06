@@ -2,6 +2,7 @@ package com.ahmetyasin.demogetir.service.Impl;
 
 import com.ahmetyasin.demogetir.entity.Order;
 import com.ahmetyasin.demogetir.entity.dto.OrderDTO;
+import com.ahmetyasin.demogetir.entity.dto.StatisticDto;
 import com.ahmetyasin.demogetir.mapper.MapperHelper;
 import com.ahmetyasin.demogetir.repository.IOrderRepository;
 import com.ahmetyasin.demogetir.service.OrderService;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,7 +21,6 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     IOrderRepository repository;
     private final Logger logger = LoggerFactory.getLogger(OrderService.class);
-
 
 
     @Override
@@ -64,11 +65,16 @@ public class OrderServiceImpl implements OrderService {
 
     }
 
-    //   @Override
-    //   public List<OrderDTO> betweenDates(String startDate,String endDate) {
+    @Override
+    public List<OrderDTO> betweenDates(Date startDate, Date endDate) {
 
-       // return MapperHelper.convertAll(repository.betweenDates(startDate,endDate),OrderDTO.class);
-    //}
+        return MapperHelper.convertAll(repository.betweenDates(startDate, endDate), OrderDTO.class);
+    }
+    @Override
+    public List<StatisticDto> monthlyStatistic(Long id) {
+
+        return repository.getMonthlyStatistics(id);
+    }
 
 
 }

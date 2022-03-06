@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -25,10 +26,10 @@ public class BookController {
 
     @GetMapping("/list")
     @ApiOperation(value = "Book Entry",notes = "Book list RestApi")
-    public List<BookDTO> listBook(Pageable pageable) {
+    public ResponseEntity<List<BookDTO>> listBook(Pageable pageable) {
         // get employees from db
         List<BookDTO> bookList = bookService.findAll(pageable);
-        return bookList;
+        return ResponseEntity.ok(bookList);
     }
 
     @DeleteMapping("/delete/{bookId}")
@@ -50,16 +51,16 @@ public class BookController {
 
     @PostMapping("/add")
     @ApiOperation(value = "Book Entry",notes = "Book add RestApi")
-    public BookDTO addBook(@RequestBody BookDTO bookDTO) {
+    public String addBook(@Valid @RequestBody BookDTO bookDTO) {
 
         bookService.save(bookDTO);
 
-        return bookDTO;
+        return "Kayıt Başarıyla Tamamlandı.";
     }
 
     @GetMapping("/{bookId}")
     @ApiOperation(value = "Book get Entry",notes = "Login get RestApi")
-    public BookDTO getBook(@PathVariable Long bookId) {
+    public ResponseEntity<BookDTO> getBook(@PathVariable Long bookId) {
 
         BookDTO book = bookService.findById(bookId);
 
@@ -70,12 +71,12 @@ public class BookController {
         }
 
 
-        return book;
+        return ResponseEntity.ok(book);
     }
 
     @PutMapping("/update/{bookId}")
     @ApiOperation(value = "Book Update",notes = "Book Update RestApi")
-    public BookDTO updateBook(@PathVariable Long bookId ,@RequestBody BookDTO book) {
+    public ResponseEntity<BookDTO> updateBook(@PathVariable Long bookId ,@RequestBody BookDTO book) {
         BookDTO bookDTO = bookService.findById(bookId);
         if (bookId!=bookDTO.getId()){
             throw new RuntimeException("book id not match - " + bookId);
@@ -83,7 +84,7 @@ public class BookController {
         bookService.update(book,bookId);
 
 
-        return book;
+        return ResponseEntity.ok(book);
     }
 
 }

@@ -52,6 +52,11 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests().antMatchers("/v2/**").permitAll()
                 .and().authorizeRequests().antMatchers("/swagger/**").permitAll()
                 .and().authorizeRequests().antMatchers("/swagger-resources/**").permitAll()
+                .and().authorizeRequests().antMatchers("/user/save").permitAll()
+                .and().authorizeRequests().antMatchers("/book/**").permitAll()
+                .and().authorizeRequests().antMatchers("/order/**").permitAll()
+                .and().authorizeRequests().antMatchers("/customer/**").permitAll()
+                .and().authorizeRequests().antMatchers("/statistic/**").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 

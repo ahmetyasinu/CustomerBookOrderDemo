@@ -9,12 +9,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
-@ApiModel(value = "customer",description = "customer Entity")
+@ApiModel(value = "customer", description = "customer Entity")
 public class Customer extends BaseEntity<Long> {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "username")
@@ -25,12 +25,28 @@ public class Customer extends BaseEntity<Long> {
     @ApiModelProperty(value = "password")
     private String password;
 
+    @Column(name = "email")
+    @ApiModelProperty(value = "email")
+    private String email;
+
     public Customer() {
     }
 
-    public Customer(String username, String password) {
+    public Customer(Long id, String username, String password, String email) {
+        this.id = id;
         this.username = username;
         this.password = password;
+        this.email = email;
+    }
+
+    @Override
+    public Long getID() {
+        return this.id;
+    }
+
+    @Override
+    public void setID(Long ID) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -49,15 +65,22 @@ public class Customer extends BaseEntity<Long> {
         this.password = password;
     }
 
-    @Override
-    public Long getID() {
-        return this.id;
+    public String getEmail() {
+        return email;
     }
 
-    @Override
-    public void setID(Long ID) {
-
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

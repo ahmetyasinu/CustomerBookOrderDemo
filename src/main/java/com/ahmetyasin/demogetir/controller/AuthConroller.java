@@ -3,6 +3,9 @@ package com.ahmetyasin.demogetir.controller;
 
 import com.ahmetyasin.demogetir.auth.TokenManager;
 import com.ahmetyasin.demogetir.entity.User;
+import com.ahmetyasin.demogetir.entity.dto.UserDto;
+import com.ahmetyasin.demogetir.service.Impl.UserServiceImpl;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +25,13 @@ public class AuthConroller {
     private TokenManager tokenManager;
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private UserServiceImpl userServiceImpl;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @PostMapping
-    public ResponseEntity<String> login(@RequestBody User user) {
+    public ResponseEntity<String> login(@RequestBody UserDto user) {
 
         try {
             logger.info("Username and Password Contol are starting");
@@ -40,4 +45,6 @@ public class AuthConroller {
             throw e;
         }
     }
+
+
 }

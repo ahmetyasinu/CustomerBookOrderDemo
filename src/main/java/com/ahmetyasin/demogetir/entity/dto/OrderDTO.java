@@ -1,64 +1,70 @@
 package com.ahmetyasin.demogetir.entity.dto;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 public class OrderDTO extends BaseDTO<Long> {
 
-  private Long id;
-  private Integer customerId;
-  private Integer price;
-  private LocalDateTime createdAt;
-  private List<OrderItemDTO> orderItems;
+    private Long id;
+    private Integer customerId;
+    private Integer price;
+    private LocalDateTime createdAt;
+    private List<OrderItemDTO> orderItems;
+    private Date startDate;
+    private Date endDate;
 
-  public OrderDTO() {
-  }
 
-  public OrderDTO(Long id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems) {
-    this.id = id;
-    this.customerId = customerId;
-    this.price = price;
-    this.createdAt = createdAt;
-    this.orderItems = orderItems;
-  }
+    public OrderDTO() {
+    }
 
-  public Long getId() {
-    return id;
-  }
+    public OrderDTO(Long id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems,Date startDate, Date endDate) {
+        this.id = id;
+        this.customerId = customerId;
+        this.price = price;
+        this.createdAt = createdAt;
+        this.orderItems = orderItems;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public Integer getCustomerId() {
-    return customerId;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setCustomerId(Integer customerId) {
-    this.customerId = customerId;
-  }
+    public Integer getCustomerId() {
+        return customerId;
+    }
 
-  public Integer getPrice() {
-    return price;
-  }
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
 
-  public void setPrice(Integer price) {
-    this.price = price;
-  }
+    public Integer getPrice() {
+        return price;
+    }
 
-  public LocalDateTime getCreatedAt() {
-    return createdAt;
-  }
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 
-  public void setCreatedAt(LocalDateTime createdAt) {
-    this.createdAt = createdAt;
-  }
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 
-  public List<OrderItemDTO> getOrderItems() {
-    return orderItems;
-  }
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 
-  public void setOrderItems(List<OrderItemDTO> orderItems) {
-    this.orderItems = orderItems;
-  }
+    public List<OrderItemDTO> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItemDTO> orderItems) {
+        this.orderItems = orderItems;
+    }
 }

@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiModel;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -22,6 +25,13 @@ public class Order extends BaseEntity<Long> {
     @Column(name = "price")
     private Integer price;
 
+    @Column(name = "start_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date startDate;
+
+    @Column(name = "end_date")
+    private Date endDate;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private List<OrderItem> orderItemEntities;
@@ -29,10 +39,12 @@ public class Order extends BaseEntity<Long> {
     public Order() {
     }
 
-    public Order(Long id, Integer customerId, Integer price, List<OrderItem> orderItemEntities) {
+    public Order(Long id, Integer customerId, Integer price, Date startDate, Date endDate, List<OrderItem> orderItemEntities) {
         this.id = id;
         this.customerId = customerId;
         this.price = price;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.orderItemEntities = orderItemEntities;
     }
 
@@ -69,5 +81,17 @@ public class Order extends BaseEntity<Long> {
 
     public void setOrderItemEntities(List<OrderItem> orderItemEntities) {
         this.orderItemEntities = orderItemEntities;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", price=" + price +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", orderItemEntities=" + orderItemEntities +
+                '}';
     }
 }

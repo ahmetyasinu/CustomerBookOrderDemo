@@ -7,9 +7,12 @@ import com.ahmetyasin.demogetir.service.Impl.CustomerServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,16 +25,16 @@ public class CustomerController {
     @RequestMapping("/save")
     @PostMapping
     @ApiOperation(value = "Customer Entry",notes = "Customer Create RestApi")
-    public void UserController(@RequestBody CustomerDTO customer){
+    public void saveCustomer(@Valid @RequestBody CustomerDTO customer){
         customerServiceImpl.save(customer);
     }
 
     @GetMapping("/list")
     @ApiOperation(value = "Customer Entry",notes = "Customer list RestApi")
-    public List<CustomerDTO> listTraveller(Pageable pageable) {
+    public ResponseEntity<List<CustomerDTO>> listCustomers() {
         // get employees from db
-        List<CustomerDTO> customerDTOList = customerServiceImpl.findAll(pageable);
-        return customerDTOList;
+        List<CustomerDTO> customerDTOList = customerServiceImpl.findAll();
+        return ResponseEntity.ok(customerDTOList);
     }
 
     @DeleteMapping("/delete/{customerId}")
@@ -46,16 +49,16 @@ public class CustomerController {
 
     @PostMapping("/add")
     @ApiOperation(value = "Customer Entry",notes = "Customer save RestApi")
-    public CustomerDTO addCustomer(@RequestBody CustomerDTO customerDTO) {
+    public ResponseEntity<CustomerDTO> addCustomer(@RequestBody CustomerDTO customerDTO) {
 
         customerServiceImpl.save(customerDTO);
 
-        return customerDTO;
+        return ResponseEntity.ok(customerDTO);
     }
 
     @GetMapping("/{customerId}")
     @ApiOperation(value = "Customer Entry",notes = "Customer get RestApi")
-    public CustomerDTO getCustomer(@PathVariable Long customerId) {
+    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable Long customerId) {
 
         CustomerDTO customerDTO = customerServiceImpl.findById(customerId);
 
@@ -66,18 +69,18 @@ public class CustomerController {
         }
 
 
-        return customerDTO;
+        return ResponseEntity.ok(customerDTO);
     }
 
     @PutMapping("/update/{customerId}")
     @ApiOperation(value = "Customer Entry",notes = "Customer Update RestApi")
-    public CustomerDTO updateCustomer(@PathVariable Long customerId ,@RequestBody CustomerDTO customerDTO) {
+    public ResponseEntity<CustomerDTO> updateCustomer(@PathVariable Long customerId ,@RequestBody CustomerDTO customerDTO) {
         CustomerDTO customer = customerServiceImpl.findById(customerId);
         if (customerId!=customer.getId()){
             throw new RuntimeException("book id not match - " + customerId);
         }
         customerServiceImpl.save(customerDTO);
 
-        return customerDTO;
+        return ResponseEntity.ok(customerDTO);
     }
 }

@@ -1,5 +1,6 @@
 package com.ahmetyasin.demogetir.service.Impl;
 
+import com.ahmetyasin.demogetir.entity.Customer;
 import com.ahmetyasin.demogetir.entity.User;
 import com.ahmetyasin.demogetir.entity.dto.UserDto;
 import com.ahmetyasin.demogetir.mapper.MapperHelper;

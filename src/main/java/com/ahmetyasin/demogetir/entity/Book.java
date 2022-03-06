@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "Book")
@@ -17,10 +18,16 @@ public class Book extends BaseEntity<Long> {
     private Long id;
 
     @Column(name = "name")
+    @NotBlank(message = "Book Name Null")
     private String name;
 
     @Column(name = "author")
+    @NotBlank(message = "author Name Null")
     private String author;
+
+    @Column(name = "pageSize")
+    private String pageSize;
+
 
     @Column(name = "price")
     private Integer price;
@@ -80,5 +87,16 @@ public class Book extends BaseEntity<Long> {
     @Override
     public void setID(Long ID) {
         this.id = ID;
+    }
+    @Override
+    public String toString() {
+        return "BookDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", pageSize=" + pageSize +
+                ", price=" + price +
+                ", stock=" + stock +
+                '}';
     }
 }

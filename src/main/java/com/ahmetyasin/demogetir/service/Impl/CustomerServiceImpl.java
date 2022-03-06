@@ -21,9 +21,9 @@ public class CustomerServiceImpl implements CustomerService {
     private final Logger logger = LoggerFactory.getLogger(CustomerService.class);
 
     @Override
-    public List<CustomerDTO> findAll(Pageable pageable) {
+    public List<CustomerDTO> findAll() {
         logger.info("Finding all {} datas.", Customer.class);
-        List<Customer> customers = (List<Customer>) this.repository.findAll(pageable);
+        List<Customer> customers = (List<Customer>) this.repository.findAll();
         return MapperHelper.convertAll(customers,CustomerDTO.class);
     }
 

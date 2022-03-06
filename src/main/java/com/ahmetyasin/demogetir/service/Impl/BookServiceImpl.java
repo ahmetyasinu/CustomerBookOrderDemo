@@ -72,7 +72,20 @@ public class BookServiceImpl implements BookService {
             throw new RuntimeException("Id ler eşleşmedi.");
         }
 
+        Optional<Book> bookById = repository.findById(id);
+        if (bookById.isPresent()){
+            if(bookById.get().getStock() + bookDTO.getId() < 0){
+                throw new IllegalStateException("Impossible operation: More items than stock is deleted.");
+            }
+        } else{
+            throw new IllegalStateException("Book is not found!");
+        }
+
+        Book book = bookById.get();
+        book.setStock((int) (book.getStock()+bookDTO.getId()));
+
         repository.save(MapperHelper.convertBack(bookDTO,Book.class));
+
     }
 
 

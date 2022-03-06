@@ -13,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -30,25 +32,25 @@ public class OrderController {
     @RequestMapping("/save")
     @PostMapping
     @ApiOperation(value = "Order Entry",notes = "Order Create RestApi")
-    public void orderCreate(@RequestBody OrderDTO order){
+    public void orderCreate(@Valid @RequestBody OrderDTO order){
         orderService.save(order);
     }
 
 
     @GetMapping("/{id}")
     @ApiOperation(value = "Order Entry",notes = "Order find by id RestApi")
-    public OrderDTO getById(@PathVariable Long id) {
-        return orderService.findById(id);
+    public ResponseEntity<OrderDTO> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(orderService.findById(id));
     }
 
     @GetMapping("/list")
     @ApiOperation(value = "Order Entry",notes = "Order list RestApi")
-    public List<OrderDTO> findAll(Pageable pageable) {
-        return orderService.findAll(pageable);
+    public ResponseEntity<List<OrderDTO>> findAll(Pageable pageable) {
+        return ResponseEntity.ok(orderService.findAll(pageable));
     }
 
-    //@GetMapping("/betweendate/{startDate}/{endDate}")
-    //public List<OrderDTO> getOrdersBetweenGivenDates(@PathVariable LocalDateTime startDate,@PathVariable LocalDateTime endDate) {
-      //  return orderService.betweenDates(startDate.toString(), endDate.toString());
-    //}
+    @GetMapping("/betweendate/{startDate}/{endDate}")
+    public ResponseEntity<List<OrderDTO>> getOrdersBetweenGivenDates(@PathVariable Date startDate,@PathVariable Date endDate) {
+        return ResponseEntity.ok(orderService.betweenDates(startDate, endDate));
+    }
 }
