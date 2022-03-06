@@ -48,6 +48,13 @@ Technologies
 
 -Docker
 
+• Logging - Log all changes on entities. SLF4J
+• Orika Mapper
+• Rest Api
+• Jpa
+• Beraer Token JWT
+• Swagger Ui
+
 
 Authentication
 POST: localhost:8080/login
