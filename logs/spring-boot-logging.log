@@ -6285,3 +6285,49 @@ java.sql.SQLSyntaxErrorException: Unknown column 'customer0_.email' in 'field li
 2022-03-06 22:34:10,535 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-03-06 22:34:10,535 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2022-03-06 22:34:10,551 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-06 23:28:37,743 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.12 on S2770 with PID 31232 (D:\Dev\demogetir\target\classes started by ayasin.uzun in D:\Dev\demogetir)
+2022-03-06 23:28:37,743 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-06 23:28:37,743 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "dev"
+2022-03-06 23:28:38,642 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-06 23:28:38,714 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2022-03-06 23:28:39,290 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-03-06 23:28:39,306 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-03-06 23:28:39,306 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-06 23:28:39,458 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-03-06 23:28:39,458 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1661 ms
+2022-03-06 23:28:39,554 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-06 23:28:39,666 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-06 23:28:39,705 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-06 23:28:39,841 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-06 23:28:39,937 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-03-06 23:28:40,225 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-03-06 23:28:40,233 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-06 23:28:40,956 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-06 23:28:40,972 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-06 23:28:41,228 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-06 23:28:41,284 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-06 23:28:41,388 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        user0_.id as id1_4_,
+        user0_.created_by as created_2_4_,
+        user0_.created_date as created_3_4_,
+        user0_.deleted_date as deleted_4_4_,
+        user0_.last_modified_by as last_mod5_4_,
+        user0_.last_modified_date as last_mod6_4_,
+        user0_.password as password7_4_,
+        user0_.username as username8_4_ 
+    from
+        user user0_
+2022-03-06 23:28:41,870 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-06 23:28:42,118 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will not secure any request
+2022-03-06 23:28:42,280 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-06 23:28:42,280 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2022-03-06 23:28:42,296 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2022-03-06 23:28:42,322 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2022-03-06 23:28:42,410 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-06 23:28:42,410 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-06 23:28:42,410 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2022-03-06 23:28:42,610 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 5.397 seconds (JVM running for 6.694)
+2022-03-06 23:30:27,690 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-06 23:30:27,690 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-06 23:30:27,722 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
