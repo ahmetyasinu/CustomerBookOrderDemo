@@ -1,21 +1,21 @@
 package com.ahmetyasin.demogetir.entity;
 
+import com.ahmetyasin.demogetir.entity.base.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
 @Entity
-@Table(name = "Login")
-@ApiModel(value = "Login",description = "Login Entity")
-public class Login  extends BaseEntity<Integer> {
+@Table(name = "User")
+@ApiModel(value = "User",description = "Login Entity")
+public class User extends BaseEntity<Long> {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "username")
     @ApiModelProperty(value = "username")
@@ -24,10 +24,10 @@ public class Login  extends BaseEntity<Integer> {
     @Column(name = "password")
     private String password;
 
-    public Login() {
+    public User() {
     }
 
-    public Login(String username, String password) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -49,14 +49,21 @@ public class Login  extends BaseEntity<Integer> {
     }
 
     @Override
-    public Integer getID() {
+    public Long getID() {
         return this.id;
     }
 
     @Override
-    public void setID(Integer ID) {
+    public void setID(Long ID) {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

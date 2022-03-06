@@ -1,4 +1,4 @@
-package com.ahmetyasin.demogetir.entity;
+package com.ahmetyasin.demogetir.entity.base;
 
 
 import org.springframework.data.annotation.CreatedBy;
@@ -16,10 +16,6 @@ import java.util.Date;
 public abstract class BaseEntity<PK extends Serializable> implements Serializable, Entity<PK> {
 	
 	private static final long serialVersionUID = 1L;
-
-	@Version
-	@Column(name = "VERSION")
-	private int version;
 
 	@CreatedBy
 	@Column(name = "CREATED_BY", updatable = false)
@@ -43,19 +39,8 @@ public abstract class BaseEntity<PK extends Serializable> implements Serializabl
 	@Column(name = "DELETED_DATE")
 	private Date deletedDate;
 
-	@Column(name = "DELETED")
-	private boolean deleted = false;
-
 	@Transient
 	private boolean newEntity = true;
-
-	public int getVersion() {
-		return version;
-	}
-
-	public void setVersion(int version) {
-		this.version = version;
-	}
 
 	public String getCreatedBy() {
 		return createdBy;
@@ -95,14 +80,6 @@ public abstract class BaseEntity<PK extends Serializable> implements Serializabl
 
 	public void setDeletedDate(Date deletedDate) {
 		this.deletedDate = deletedDate;
-	}
-
-	public boolean isDeleted() {
-		return deleted;
-	}
-
-	public void setDeleted(boolean deleted) {
-		this.deleted = deleted;
 	}
 
 	public boolean isNewEntity() {
