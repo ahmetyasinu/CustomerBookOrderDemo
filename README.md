@@ -54,6 +54,7 @@ Technologies
 • Jpa
 • Beraer Token JWT
 • Swagger Ui
+• Validate
 
 
 Authentication
