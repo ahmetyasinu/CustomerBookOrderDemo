@@ -62,11 +62,11 @@ POST: localhost:8080/login
 
 JSON:
 
-{ "username": "getir", "password": "password" }
+{ "username": "", "password": "" }
 
 Response:
 
-{ "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnZXRpciIsImV4cCI6MTY0NDIyNDg5NSwiaWF0IjoxNjQ0MTg4ODk1fQ.OYE-dC-mZBuCD81lONeWl2LTkYzH3CXGlGH1aSCDMi0FjILv1azktVFNWIdkkFJvfQR8D5HEoA6nukuATlXUCg" }
+{ "token": "beraer" }
 
 Swagger
 http://localhost:8080/swagger-ui.html
