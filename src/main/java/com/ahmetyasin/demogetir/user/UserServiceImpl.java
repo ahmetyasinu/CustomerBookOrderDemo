@@ -28,9 +28,9 @@ public class UserServiceImpl implements UserService {
     public List<UserDto> findAll() {
         logger.info("Finding all {} datas.", UserDto.class);
 
-        List<User> users=this.userRepository.findAll();
+        List<User> users = this.userRepository.findAll();
 
-        return MapperHelper.convertAll(users,UserDto.class);
+        return MapperHelper.convertAll(users, UserDto.class);
     }
 
     @Override
@@ -46,14 +46,14 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("Did not find book id - " + id);
         }
 
-        return MapperHelper.convert(user,UserDto.class);
+        return MapperHelper.convert(user, UserDto.class);
     }
 
     @Transactional
     @Override
     public void save(UserDto userDto) {
 
-        userRepository.save(MapperHelper.convertBack(userDto,User.class));
+        userRepository.save(MapperHelper.convertBack(userDto, User.class));
 
     }
 
@@ -63,10 +63,11 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
 
     }
+
     @Transactional
     @Override
     public void update(UserDto userDto, Long id) {
-        userRepository.save(MapperHelper.convertBack(userDto,User.class));
+        userRepository.save(MapperHelper.convertBack(userDto, User.class));
     }
 
 

@@ -6,7 +6,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 @NoRepositoryBean
-public interface BaseRepository<T> extends PagingAndSortingRepository<T, Long>, JpaSpecificationExecutor<T>, JpaRepository<T,Long> {
+public interface BaseRepository<T> extends PagingAndSortingRepository<T, Long>, JpaSpecificationExecutor<T>, JpaRepository<T, Long> {
 
     @Override
     <S extends T> S save(S entity);

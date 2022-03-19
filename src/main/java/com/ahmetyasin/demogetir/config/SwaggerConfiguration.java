@@ -41,7 +41,6 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
     }
 
 
-
     private ApiInfo apiEndPointsInfo() {
         return new ApiInfoBuilder().title("Getir Swagger")
                 .description("Api Dokümantasyonu")

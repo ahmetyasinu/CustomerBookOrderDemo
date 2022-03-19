@@ -22,26 +22,26 @@ public class OrderController {
 
     @RequestMapping("/save")
     @PostMapping
-    @ApiOperation(value = "Order Entry",notes = "Order Create RestApi")
-    public void orderCreate(@Valid @RequestBody OrderDTO order){
+    @ApiOperation(value = "Order Entry", notes = "Order Create RestApi")
+    public void orderCreate(@Valid @RequestBody OrderDTO order) {
         orderService.save(order);
     }
 
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Order Entry",notes = "Order find by id RestApi")
+    @ApiOperation(value = "Order Entry", notes = "Order find by id RestApi")
     public ResponseEntity<OrderDTO> getById(@PathVariable Long id) {
         return ResponseEntity.ok(orderService.findById(id));
     }
 
     @GetMapping("/list")
-    @ApiOperation(value = "Order Entry",notes = "Order list RestApi")
+    @ApiOperation(value = "Order Entry", notes = "Order list RestApi")
     public ResponseEntity<List<OrderDTO>> findAll(Pageable pageable) {
         return ResponseEntity.ok(orderService.findAll(pageable));
     }
 
     @GetMapping("/betweendate/{startDate}/{endDate}")
-    public ResponseEntity<List<OrderDTO>> getOrdersBetweenGivenDates(@PathVariable Date startDate,@PathVariable Date endDate) {
+    public ResponseEntity<List<OrderDTO>> getOrdersBetweenGivenDates(@PathVariable Date startDate, @PathVariable Date endDate) {
         return ResponseEntity.ok(orderService.betweenDates(startDate, endDate));
     }
 }

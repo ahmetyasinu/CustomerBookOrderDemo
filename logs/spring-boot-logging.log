@@ -7259,3 +7259,153 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
 	... 89 common frames omitted
+2022-03-19 18:45:04,985 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemogetirApplication using Java 11.0.6 on LA with PID 11800 (D:\Dev\demogetir\target\classes started by Ahmet in D:\Dev\demogetir)
+2022-03-19 18:45:04,993 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-19 18:45:04,993 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "dev"
+2022-03-19 18:45:07,529 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-19 18:45:07,729 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 178 ms. Found 5 JPA repository interfaces.
+2022-03-19 18:45:09,177 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-03-19 18:45:09,193 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-03-19 18:45:09,193 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-19 18:45:09,473 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-03-19 18:45:09,473 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4320 ms
+2022-03-19 18:45:09,681 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtTokenFilter' configured for use
+2022-03-19 18:45:09,945 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-19 18:45:10,049 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-19 18:45:10,417 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-19 18:45:10,657 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-03-19 18:45:11,417 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-03-19 18:45:11,449 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-03-19 18:45:13,450 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    drop table if exists book
+2022-03-19 18:45:13,554 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    drop table if exists customer
+2022-03-19 18:45:13,682 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    drop table if exists order_item
+2022-03-19 18:45:13,746 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    drop table if exists orders
+2022-03-19 18:45:13,946 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    drop table if exists user
+2022-03-19 18:45:14,018 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    create table book (
+       id bigint not null auto_increment,
+        created_by varchar(255),
+        created_date datetime,
+        deleted_date datetime,
+        last_modified_by varchar(255),
+        last_modified_date datetime,
+        version bigint,
+        author varchar(255) not null,
+        name varchar(255),
+        page_size integer,
+        price integer,
+        stock integer,
+        primary key (id)
+    ) engine=MyISAM
+2022-03-19 18:45:14,130 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    create table customer (
+       id bigint not null auto_increment,
+        created_by varchar(255),
+        created_date datetime,
+        deleted_date datetime,
+        last_modified_by varchar(255),
+        last_modified_date datetime,
+        version bigint,
+        email varchar(255),
+        password varchar(255),
+        username varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2022-03-19 18:45:14,234 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    create table order_item (
+       id bigint not null auto_increment,
+        created_by varchar(255),
+        created_date datetime,
+        deleted_date datetime,
+        last_modified_by varchar(255),
+        last_modified_date datetime,
+        version bigint,
+        price double precision not null,
+        quantity integer not null,
+        total_price double precision,
+        book_id bigint,
+        order_id bigint,
+        primary key (id)
+    ) engine=MyISAM
+2022-03-19 18:45:14,322 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    create table orders (
+       id bigint not null auto_increment,
+        created_by varchar(255),
+        created_date datetime,
+        deleted_date datetime,
+        last_modified_by varchar(255),
+        last_modified_date datetime,
+        version bigint,
+        customer_id integer,
+        end_date datetime,
+        price integer,
+        start_date datetime,
+        primary key (id)
+    ) engine=MyISAM
+2022-03-19 18:45:14,442 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    create table user (
+       id bigint not null auto_increment,
+        created_by varchar(255),
+        created_date datetime,
+        deleted_date datetime,
+        last_modified_by varchar(255),
+        last_modified_date datetime,
+        version bigint,
+        password varchar(255),
+        username varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2022-03-19 18:45:14,594 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    alter table order_item 
+       add constraint FKb033an1f8qmpbnfl0a6jb5njs 
+       foreign key (book_id) 
+       references book (id)
+2022-03-19 18:45:15,874 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    
+    alter table order_item 
+       add constraint FKt4dc2r9nbvbujrljv3e23iibt 
+       foreign key (order_id) 
+       references orders (id)
+2022-03-19 18:45:16,506 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-19 18:45:16,530 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19 18:45:17,370 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-19 18:45:17,562 INFO com.ahmetyasin.demogetir.user.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-19 18:45:17,802 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
+    select
+        user0_.id as id1_4_,
+        user0_.created_by as created_2_4_,
+        user0_.created_date as created_3_4_,
+        user0_.deleted_date as deleted_4_4_,
+        user0_.last_modified_by as last_mod5_4_,
+        user0_.last_modified_date as last_mod6_4_,
+        user0_.version as version7_4_,
+        user0_.password as password8_4_,
+        user0_.username as username9_4_ 
+    from
+        user user0_
+2022-03-19 18:45:19,386 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-19 18:45:20,114 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will not secure any request
+2022-03-19 18:45:20,587 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-19 18:45:20,587 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2022-03-19 18:45:20,627 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2022-03-19 18:45:20,691 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2022-03-19 18:45:21,291 INFO org.springframework.boot.StartupInfoLogger [main] Started DemogetirApplication in 17.827 seconds (JVM running for 20.411)
+2022-03-19 18:45:28,492 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19 18:45:28,500 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-19 18:45:28,524 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

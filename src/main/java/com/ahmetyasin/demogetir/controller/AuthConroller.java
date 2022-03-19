@@ -23,10 +23,9 @@ public class AuthConroller {
     private TokenManager tokenManager;
     @Autowired
     private AuthenticationManager authenticationManager;
-    @Autowired
-    private UserServiceImpl userServiceImpl;
 
-    Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @PostMapping
     public ResponseEntity<String> login(@RequestBody UserDto user) {

@@ -19,7 +19,7 @@ public class StatisticController {
 
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Statistic",notes = "Statistic list RestApi")
+    @ApiOperation(value = "Statistic", notes = "Statistic list RestApi")
     public ResponseEntity<List<StatisticDto>> findById(@PathVariable Long id) {
         return ResponseEntity.ok(orderService.monthlyStatistic(id));
     }

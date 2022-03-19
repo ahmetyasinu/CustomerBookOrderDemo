@@ -5,76 +5,77 @@ import java.util.Date;
 
 public abstract class BaseDTO<PK extends Serializable> implements Serializable, DTO<PK> {
 
-	private int version;
+    private int version;
 
-	private String createdBy;
+    private String createdBy;
 
-	private Date createdDate;
+    private Date createdDate;
 
-	private String lastModifiedBy;
+    private String lastModifiedBy;
 
-	private Date lastModifiedDate;
+    private Date lastModifiedDate;
 
-	private Date deletedDate;
+    private Date deletedDate;
 
-	private boolean deleted = false;
-	
-	public BaseDTO(){}
+    private boolean deleted = false;
 
-	public int getVersion() {
-		return version;
-	}
+    public BaseDTO() {
+    }
 
-	public void setVersion(int version) {
-		this.version = version;
-	}
+    public int getVersion() {
+        return version;
+    }
 
-	public String getCreatedBy() {
-		return createdBy;
-	}
+    public void setVersion(int version) {
+        this.version = version;
+    }
 
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
+    public String getCreatedBy() {
+        return createdBy;
+    }
 
-	public Date getCreatedDate() {
-		return createdDate;
-	}
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
-	}
+    public Date getCreatedDate() {
+        return createdDate;
+    }
 
-	public String getLastModifiedBy() {
-		return lastModifiedBy;
-	}
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
 
-	public void setLastModifiedBy(String lastModifiedBy) {
-		this.lastModifiedBy = lastModifiedBy;
-	}
+    public String getLastModifiedBy() {
+        return lastModifiedBy;
+    }
 
-	public Date getLastModifiedDate() {
-		return lastModifiedDate;
-	}
+    public void setLastModifiedBy(String lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+    }
 
-	public void setLastModifiedDate(Date lastModifiedDate) {
-		this.lastModifiedDate = lastModifiedDate;
-	}
+    public Date getLastModifiedDate() {
+        return lastModifiedDate;
+    }
 
-	public Date getDeletedDate() {
-		return deletedDate;
-	}
+    public void setLastModifiedDate(Date lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
 
-	public void setDeletedDate(Date deletedDate) {
-		this.deletedDate = deletedDate;
-	}
+    public Date getDeletedDate() {
+        return deletedDate;
+    }
 
-	public boolean isDeleted() {
-		return deleted;
-	}
+    public void setDeletedDate(Date deletedDate) {
+        this.deletedDate = deletedDate;
+    }
 
-	public void setDeleted(boolean deleted) {
-		this.deleted = deleted;
-	}
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
 
 }

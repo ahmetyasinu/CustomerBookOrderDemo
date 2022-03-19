@@ -29,5 +29,5 @@ public interface IOrderRepository extends BaseRepository<Order> {
 
     //Optional<Order> findByIdAndOrderId(Long id, Integer orderId);
     //List<Order> findAllByCreatedAtBetweenAndOrderId(LocalDateTime startDate, LocalDateTime endDate, Integer orderId);
-   // List<Order> findAllByOrderId(Integer orderId);
+    // List<Order> findAllByOrderId(Integer orderId);
 }

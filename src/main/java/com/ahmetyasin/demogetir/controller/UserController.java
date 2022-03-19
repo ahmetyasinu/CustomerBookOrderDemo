@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserServiceImpl userServiceImpl;
+
     @RequestMapping("/save")
     @PostMapping
     @ApiOperation(value = "User Entry", notes = "User Create RestApi")

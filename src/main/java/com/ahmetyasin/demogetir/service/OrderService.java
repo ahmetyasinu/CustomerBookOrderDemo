@@ -12,11 +12,16 @@ import java.util.List;
 public interface OrderService {
 
     public List<OrderDTO> findAll(Pageable pageable);
+
     public OrderDTO findById(Long id);
+
     public OrderDTO save(OrderDTO order);
+
     public void deleteById(Long id);
+
     public List<OrderDTO> betweenDates(Date startDate, Date endDate);
-    public List<StatisticDto> monthlyStatistic(Long id) ;
+
+    public List<StatisticDto> monthlyStatistic(Long id);
 
 
-    }
+}

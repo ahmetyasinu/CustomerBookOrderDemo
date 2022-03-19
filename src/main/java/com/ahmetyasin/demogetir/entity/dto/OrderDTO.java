@@ -18,7 +18,7 @@ public class OrderDTO extends BaseDTO<Long> {
     public OrderDTO() {
     }
 
-    public OrderDTO(Long id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems,Date startDate, Date endDate) {
+    public OrderDTO(Long id, Integer customerId, Integer price, LocalDateTime createdAt, List<OrderItemDTO> orderItems, Date startDate, Date endDate) {
         this.id = id;
         this.customerId = customerId;
         this.price = price;

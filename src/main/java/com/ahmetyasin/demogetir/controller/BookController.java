@@ -22,16 +22,16 @@ public class BookController {
     private BookServiceImpl bookService;
 
 
-
     @GetMapping("/list")
-    @ApiOperation(value = "Book Entry",notes = "Book list RestApi")
+    @ApiOperation(value = "Book Entry", notes = "Book list RestApi")
     public ResponseEntity<List<BookDTO>> listBook(Pageable pageable) {
         // get employees from db
         List<BookDTO> bookList = bookService.findAll(pageable);
         return ResponseEntity.ok(bookList);
     }
+
     @PostMapping("/add")
-    @ApiOperation(value = "Book Entry",notes = "Book add RestApi")
+    @ApiOperation(value = "Book Entry", notes = "Book add RestApi")
     public ResponseEntity<BookDTO> addBook(@Valid @RequestBody BookDTO bookDTO) {
 
         bookService.save(bookDTO);
@@ -40,7 +40,7 @@ public class BookController {
     }
 
     @DeleteMapping("/delete/{bookId}")
-    @ApiOperation(value = "Book Entry",notes = "Book delete RestApi")
+    @ApiOperation(value = "Book Entry", notes = "Book delete RestApi")
     public String deleteBook(@PathVariable Long bookId) {
 
         BookDTO book = bookService.findById(bookId);
@@ -57,9 +57,8 @@ public class BookController {
     }
 
 
-
     @GetMapping("/{bookId}")
-    @ApiOperation(value = "Book get Entry",notes = "Login get RestApi")
+    @ApiOperation(value = "Book get Entry", notes = "Login get RestApi")
     public ResponseEntity<BookDTO> getBook(@PathVariable Long bookId) {
 
         BookDTO book = bookService.findById(bookId);
@@ -75,13 +74,13 @@ public class BookController {
     }
 
     @PutMapping("/update/{bookId}")
-    @ApiOperation(value = "Book Update",notes = "Book Update RestApi")
-    public ResponseEntity<BookDTO> updateBook(@PathVariable Long bookId ,@RequestBody BookDTO book) {
+    @ApiOperation(value = "Book Update", notes = "Book Update RestApi")
+    public ResponseEntity<BookDTO> updateBook(@PathVariable Long bookId, @RequestBody BookDTO book) {
         BookDTO bookDTO = bookService.findById(bookId);
-        if (bookId!=bookDTO.getId()){
+        if (bookId != bookDTO.getId()) {
             throw new RuntimeException("book id not match - " + bookId);
         }
-        bookService.update(book,bookId);
+        bookService.update(book, bookId);
 
 
         return ResponseEntity.ok(book);

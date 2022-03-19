@@ -13,9 +13,13 @@ import java.util.List;
 public interface OrderItemService {
 
     public List<OrderItemDTO> findAll(Pageable pageable);
+
     public OrderItemDTO findById(Long id);
+
     public void save(OrderItemDTO orderItem);
+
     public void deleteById(Long id);
+
     public void update(OrderItemDTO orderItem, Long id);
 
 }

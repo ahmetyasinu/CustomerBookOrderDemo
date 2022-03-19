@@ -12,11 +12,11 @@ import java.util.List;
 
 @Entity
 @Table(name = "orders")
-@ApiModel(value = "order",description = "order Entity")
+@ApiModel(value = "order", description = "order Entity")
 public class Order extends BaseEntity<Long> {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "customer_id")
@@ -54,7 +54,7 @@ public class Order extends BaseEntity<Long> {
 
     @Override
     public void setID(Long ID) {
-        this.id=id;
+        this.id = id;
 
     }
 

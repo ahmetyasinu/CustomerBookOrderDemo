@@ -20,13 +20,13 @@ public class CustomerController {
 
     @RequestMapping("/save")
     @PostMapping
-    @ApiOperation(value = "Customer Entry",notes = "Customer Create RestApi")
-    public void saveCustomer(@Valid @RequestBody CustomerDTO customer){
+    @ApiOperation(value = "Customer Entry", notes = "Customer Create RestApi")
+    public void saveCustomer(@Valid @RequestBody CustomerDTO customer) {
         customerServiceImpl.save(customer);
     }
 
     @GetMapping("/list")
-    @ApiOperation(value = "Customer Entry",notes = "Customer list RestApi")
+    @ApiOperation(value = "Customer Entry", notes = "Customer list RestApi")
     public ResponseEntity<List<CustomerDTO>> listCustomers() {
         // get employees from db
         List<CustomerDTO> customerDTOList = customerServiceImpl.findAll();
@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/delete/{customerId}")
-    @ApiOperation(value = "Customer Entry",notes = "Customer delete RestApi")
+    @ApiOperation(value = "Customer Entry", notes = "Customer delete RestApi")
     public String deleteCustomer(@PathVariable Long customerId) {
 
 
@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @PostMapping("/add")
-    @ApiOperation(value = "Customer Entry",notes = "Customer save RestApi")
+    @ApiOperation(value = "Customer Entry", notes = "Customer save RestApi")
     public ResponseEntity<CustomerDTO> addCustomer(@RequestBody CustomerDTO customerDTO) {
 
         customerServiceImpl.save(customerDTO);
@@ -53,7 +53,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{customerId}")
-    @ApiOperation(value = "Customer Entry",notes = "Customer get RestApi")
+    @ApiOperation(value = "Customer Entry", notes = "Customer get RestApi")
     public ResponseEntity<CustomerDTO> getCustomer(@PathVariable Long customerId) {
 
         CustomerDTO customerDTO = customerServiceImpl.findById(customerId);
@@ -69,10 +69,10 @@ public class CustomerController {
     }
 
     @PutMapping("/update/{customerId}")
-    @ApiOperation(value = "Customer Entry",notes = "Customer Update RestApi")
-    public ResponseEntity<CustomerDTO> updateCustomer(@PathVariable Long customerId ,@RequestBody CustomerDTO customerDTO) {
+    @ApiOperation(value = "Customer Entry", notes = "Customer Update RestApi")
+    public ResponseEntity<CustomerDTO> updateCustomer(@PathVariable Long customerId, @RequestBody CustomerDTO customerDTO) {
         CustomerDTO customer = customerServiceImpl.findById(customerId);
-        if (customerId!=customer.getId()){
+        if (customerId != customer.getId()) {
             throw new RuntimeException("book id not match - " + customerId);
         }
         customerServiceImpl.save(customerDTO);

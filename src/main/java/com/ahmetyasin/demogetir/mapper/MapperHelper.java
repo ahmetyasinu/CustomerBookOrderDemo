@@ -17,59 +17,59 @@ import java.util.stream.Collectors;
 
 public class MapperHelper {
 
-	private static MapperFacade orikaMapper;
+    private static MapperFacade orikaMapper;
 
-	private MapperHelper() {
-	}
+    private MapperHelper() {
+    }
 
-	public static <E extends BaseEntity, M extends BaseDTO> M convert(E entity, Class<? extends M> modelClass) {
-		return getOrikaMapper().map(entity, modelClass);
-	}
+    public static <E extends BaseEntity, M extends BaseDTO> M convert(E entity, Class<? extends M> modelClass) {
+        return getOrikaMapper().map(entity, modelClass);
+    }
 
-	public static <E extends BaseEntity, M extends BaseDTO> E convertBack(M model, Class<? extends E> entityClass) {
-		return getOrikaMapper().map(model, entityClass);
-	}
+    public static <E extends BaseEntity, M extends BaseDTO> E convertBack(M model, Class<? extends E> entityClass) {
+        return getOrikaMapper().map(model, entityClass);
+    }
 
-	public static <E extends BaseEntity, M extends BaseDTO> List<M> convertAll(List<E> entities, Class<? extends M> modelClass) {
-		return entities.stream().map(entity -> convert(entity, modelClass)).collect(Collectors.toList());
-	}
+    public static <E extends BaseEntity, M extends BaseDTO> List<M> convertAll(List<E> entities, Class<? extends M> modelClass) {
+        return entities.stream().map(entity -> convert(entity, modelClass)).collect(Collectors.toList());
+    }
 
-	public static <E extends BaseEntity, M extends BaseDTO> List<E> convertAllBack(List<M> models, Class<? extends E> entityClass) {
-		return models.stream().map(model -> convertBack(model, entityClass)).collect(Collectors.toList());
-	}
+    public static <E extends BaseEntity, M extends BaseDTO> List<E> convertAllBack(List<M> models, Class<? extends E> entityClass) {
+        return models.stream().map(model -> convertBack(model, entityClass)).collect(Collectors.toList());
+    }
 
-	public static MapperFacade getMapper() {
-		return MapperHelper.getOrikaMapper();
-	}
+    public static MapperFacade getMapper() {
+        return MapperHelper.getOrikaMapper();
+    }
 
-	private static MapperFacade getOrikaMapper() {
+    private static MapperFacade getOrikaMapper() {
 
-		if (orikaMapper == null)
-			initOrikaMapper();
+        if (orikaMapper == null)
+            initOrikaMapper();
 
-		return orikaMapper;
+        return orikaMapper;
 
-	}
+    }
 
-	private static void initOrikaMapper() {
+    private static void initOrikaMapper() {
 
 
-		MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
+        MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
-		ConverterFactory converterFactory = mapperFactory.getConverterFactory();
+        ConverterFactory converterFactory = mapperFactory.getConverterFactory();
 
-		converterFactory.registerConverter(new EmptyStringConverter());
+        converterFactory.registerConverter(new EmptyStringConverter());
 
-		orikaMapper = mapperFactory.getMapperFacade();
+        orikaMapper = mapperFactory.getMapperFacade();
 
-	}
+    }
 
-	private static class EmptyStringConverter extends CustomConverter<String, String> {
+    private static class EmptyStringConverter extends CustomConverter<String, String> {
 
-		@Override
-		public String convert(String value, Type<? extends String> type, MappingContext mappingContext) {
-			return StringUtils.isBlank(value) ? null : value;
-		}
+        @Override
+        public String convert(String value, Type<? extends String> type, MappingContext mappingContext) {
+            return StringUtils.isBlank(value) ? null : value;
+        }
 
-	}
+    }
 }

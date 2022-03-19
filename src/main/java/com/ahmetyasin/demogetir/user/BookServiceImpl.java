@@ -63,7 +63,7 @@ public class BookServiceImpl implements BookService {
     @Transactional
     @Override
     public void deleteById(Long id) {
-        logger.info("delete {} datas." +  id, Book.class);
+        logger.info("delete {} datas." + id, Book.class);
 
         repository.deleteById(id);
 

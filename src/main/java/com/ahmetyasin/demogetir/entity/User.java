@@ -9,12 +9,12 @@ import javax.persistence.Entity;
 
 @Entity
 @Table(name = "User")
-@ApiModel(value = "User",description = "Login Entity")
+@ApiModel(value = "User", description = "Login Entity")
 public class User extends BaseEntity<Long> {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "username")

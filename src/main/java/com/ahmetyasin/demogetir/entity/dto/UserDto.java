@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Column;
 
-public class UserDto  extends BaseDTO<Long>{
+public class UserDto extends BaseDTO<Long> {
 
 
     private String username;

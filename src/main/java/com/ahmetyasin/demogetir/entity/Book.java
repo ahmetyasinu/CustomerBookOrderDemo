@@ -11,12 +11,12 @@ import javax.validation.constraints.PositiveOrZero;
 
 @Entity
 @Table(name = "Book")
-@ApiModel(value = "Book",description = "Book Entity")
+@ApiModel(value = "Book", description = "Book Entity")
 public class Book extends BaseEntity<Long> {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
@@ -99,6 +99,7 @@ public class Book extends BaseEntity<Long> {
     public void setID(Long ID) {
         this.id = ID;
     }
+
     @Override
     public String toString() {
         return "BookDTO{" +
