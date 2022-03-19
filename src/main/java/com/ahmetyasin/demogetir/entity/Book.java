@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiModel;
 import javax.persistence.Entity;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 
 @Entity
 @Table(name = "Book")
@@ -22,27 +24,28 @@ public class Book extends BaseEntity<Long> {
     private String name;
 
     @Column(name = "author")
-    @NotBlank(message = "author Name Null")
+    @NotNull
     private String author;
 
     @Column(name = "pageSize")
-    private String pageSize;
+    private Integer pageSize;
 
 
     @Column(name = "price")
     private Integer price;
 
     @Column(name = "stock")
+    @PositiveOrZero
     private Integer stock;
 
 
     public Book() {
     }
 
-    public Book(Long id, String name, String author, Integer price, Integer stock) {
-        this.id = id;
+    public Book(@NotBlank(message = "Book Name Null") String name, @NotNull String author, Integer pageSize, Integer price, @PositiveOrZero Integer stock) {
         this.name = name;
         this.author = author;
+        this.pageSize = pageSize;
         this.price = price;
         this.stock = stock;
     }
@@ -61,6 +64,14 @@ public class Book extends BaseEntity<Long> {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     public Integer getPrice() {

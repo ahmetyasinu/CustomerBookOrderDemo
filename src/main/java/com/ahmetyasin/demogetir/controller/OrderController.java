@@ -1,24 +1,15 @@
 package com.ahmetyasin.demogetir.controller;
 
-import com.ahmetyasin.demogetir.entity.Customer;
-import com.ahmetyasin.demogetir.entity.Order;
 import com.ahmetyasin.demogetir.entity.dto.OrderDTO;
-import com.ahmetyasin.demogetir.entity.dto.UserDto;
-import com.ahmetyasin.demogetir.service.Impl.CustomerServiceImpl;
-import com.ahmetyasin.demogetir.service.Impl.OrderServiceImpl;
+import com.ahmetyasin.demogetir.user.OrderServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

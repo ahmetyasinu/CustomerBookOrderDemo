@@ -1,14 +1,10 @@
 package com.ahmetyasin.demogetir.controller;
 
-import com.ahmetyasin.demogetir.entity.Customer;
-import com.ahmetyasin.demogetir.entity.dto.BookDTO;
 import com.ahmetyasin.demogetir.entity.dto.CustomerDTO;
-import com.ahmetyasin.demogetir.service.Impl.CustomerServiceImpl;
+import com.ahmetyasin.demogetir.user.CustomerServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

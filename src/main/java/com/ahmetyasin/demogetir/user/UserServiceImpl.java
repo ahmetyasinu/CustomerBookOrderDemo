@@ -1,4 +1,4 @@
-package com.ahmetyasin.demogetir.service.Impl;
+package com.ahmetyasin.demogetir.user;
 
 import com.ahmetyasin.demogetir.entity.Customer;
 import com.ahmetyasin.demogetir.entity.User;
@@ -11,10 +11,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional(readOnly = true)
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -47,6 +49,7 @@ public class UserServiceImpl implements UserService {
         return MapperHelper.convert(user,UserDto.class);
     }
 
+    @Transactional
     @Override
     public void save(UserDto userDto) {
 
@@ -54,12 +57,13 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Transactional
     @Override
     public void deleteById(Long id) {
         userRepository.deleteById(id);
 
     }
-
+    @Transactional
     @Override
     public void update(UserDto userDto, Long id) {
         userRepository.save(MapperHelper.convertBack(userDto,User.class));

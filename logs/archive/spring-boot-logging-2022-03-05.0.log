@@ -69,7 +69,7 @@ Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: coul
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy137.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:22)
+	at UserServiceImpl.findAll(UserServiceImpl.java:22)
 	at com.ahmetyasin.demogetir.service.UserDetailsService.init(UserDetailsService.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -232,7 +232,7 @@ Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: coul
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy137.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:22)
+	at UserServiceImpl.findAll(UserServiceImpl.java:22)
 	at com.ahmetyasin.demogetir.service.UserDetailsService.init(UserDetailsService.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -395,7 +395,7 @@ Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: coul
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy137.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:22)
+	at UserServiceImpl.findAll(UserServiceImpl.java:22)
 	at com.ahmetyasin.demogetir.service.UserDetailsService.init(UserDetailsService.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -558,7 +558,7 @@ Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: coul
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy137.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:22)
+	at UserServiceImpl.findAll(UserServiceImpl.java:22)
 	at com.ahmetyasin.demogetir.service.UserDetailsService.init(UserDetailsService.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3579,7 +3579,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2022-03-05 23:31:41,857 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:31:41,873 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:31:42,154 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:31:42,201 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:31:42,201 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:31:42,310 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -3747,7 +3747,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2022-03-05 23:34:50,236 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:34:50,251 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:34:50,548 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:34:50,595 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:34:50,595 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:34:50,689 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -3914,7 +3914,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2022-03-05 23:36:42,306 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:36:42,316 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:36:42,590 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:36:42,653 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:36:42,653 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:36:42,747 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -3985,7 +3985,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2022-03-05 23:38:34,259 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:38:34,267 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:38:34,587 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:38:34,646 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:38:34,646 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:38:34,763 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4043,7 +4043,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4140,7 +4140,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:39:23,663 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:39:23,679 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:39:23,960 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:39:24,007 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:39:24,007 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:39:24,101 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4198,7 +4198,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4283,7 +4283,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:39:47,674 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:39:47,689 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:39:47,971 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:39:48,017 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:39:48,017 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:39:48,127 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4341,7 +4341,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4426,7 +4426,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:43:21,482 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:43:21,482 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:43:21,732 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:43:21,779 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:43:21,779 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:43:21,888 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4484,7 +4484,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4569,7 +4569,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:43:59,661 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:43:59,676 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:43:59,942 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:43:59,989 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:43:59,989 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:44:00,114 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4626,7 +4626,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4818,7 +4818,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set int field com.ahmetya
 2022-03-05 23:45:39,805 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:45:39,820 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:45:40,102 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:45:40,149 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:45:40,149 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:45:40,258 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4876,7 +4876,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set int field com.ahmetya
 2022-03-05 23:46:48,320 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:46:48,320 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:46:48,585 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:46:48,648 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:46:48,648 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:46:48,757 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -4934,7 +4934,7 @@ Caused by: org.springframework.orm.jpa.JpaSystemException: Null value was assign
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy138.findAll(Unknown Source)
-	at com.ahmetyasin.demogetir.service.Impl.UserServiceImpl.findAll(UserServiceImpl.java:28)
+	at UserServiceImpl.findAll(UserServiceImpl.java:28)
 	at com.ahmetyasin.demogetir.auth.UserDetailsService.init(UserDetailsService.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -5019,7 +5019,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:47:17,118 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:47:17,134 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:47:17,384 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:47:17,431 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:47:17,431 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:47:17,524 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -5074,7 +5074,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:49:38,759 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-03-05 23:49:38,759 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
 2022-03-05 23:49:39,024 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-05 23:49:39,055 INFO com.ahmetyasin.demogetir.service.Impl.UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
+2022-03-05 23:49:39,055 INFO UserServiceImpl [main] Finding all class com.ahmetyasin.demogetir.entity.dto.UserDto datas.
 2022-03-05 23:49:39,165 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] 
     select
         user0_.id as id1_4_,
@@ -5107,7 +5107,7 @@ Caused by: java.lang.IllegalArgumentException: Can not set boolean field com.ahm
 2022-03-05 23:49:46,327 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
 2022-03-05 23:49:46,423 INFO com.ahmetyasin.demogetir.controller.AuthConroller [http-nio-8080-exec-1] Username and Password Contol are starting
 2022-03-05 23:51:39,177 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2022-03-05 23:51:57,840 INFO com.ahmetyasin.demogetir.service.Impl.BookServiceImpl [http-nio-8080-exec-6] Save  class com.ahmetyasin.demogetir.entity.Book datas.
+2022-03-05 23:51:57,840 INFO BookServiceImpl [http-nio-8080-exec-6] Save  class com.ahmetyasin.demogetir.entity.Book datas.
 2022-03-05 23:51:57,898 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
     insert 
     into

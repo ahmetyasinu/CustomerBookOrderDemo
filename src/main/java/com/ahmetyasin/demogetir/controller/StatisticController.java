@@ -1,17 +1,13 @@
 package com.ahmetyasin.demogetir.controller;
 
-import com.ahmetyasin.demogetir.entity.dto.OrderDTO;
 import com.ahmetyasin.demogetir.entity.dto.StatisticDto;
-import com.ahmetyasin.demogetir.service.Impl.OrderServiceImpl;
+import com.ahmetyasin.demogetir.user.OrderServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.Date;
 import java.util.List;
 
 @RestController

@@ -1,8 +1,7 @@
 package com.ahmetyasin.demogetir.controller;
 
-import com.ahmetyasin.demogetir.entity.Book;
 import com.ahmetyasin.demogetir.entity.dto.BookDTO;
-import com.ahmetyasin.demogetir.service.Impl.BookServiceImpl;
+import com.ahmetyasin.demogetir.user.BookServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +30,14 @@ public class BookController {
         List<BookDTO> bookList = bookService.findAll(pageable);
         return ResponseEntity.ok(bookList);
     }
+    @PostMapping("/add")
+    @ApiOperation(value = "Book Entry",notes = "Book add RestApi")
+    public ResponseEntity<BookDTO> addBook(@Valid @RequestBody BookDTO bookDTO) {
+
+        bookService.save(bookDTO);
+
+        return ResponseEntity.ok(bookDTO);
+    }
 
     @DeleteMapping("/delete/{bookId}")
     @ApiOperation(value = "Book Entry",notes = "Book delete RestApi")
@@ -49,14 +56,7 @@ public class BookController {
         return "Deleted book id - " + bookId;
     }
 
-    @PostMapping("/add")
-    @ApiOperation(value = "Book Entry",notes = "Book add RestApi")
-    public String addBook(@Valid @RequestBody BookDTO bookDTO) {
 
-        bookService.save(bookDTO);
-
-        return "Kayıt Başarıyla Tamamlandı.";
-    }
 
     @GetMapping("/{bookId}")
     @ApiOperation(value = "Book get Entry",notes = "Login get RestApi")
@@ -86,5 +86,6 @@ public class BookController {
 
         return ResponseEntity.ok(book);
     }
+
 
 }

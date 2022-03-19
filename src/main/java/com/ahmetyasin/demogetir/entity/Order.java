@@ -39,8 +39,7 @@ public class Order extends BaseEntity<Long> {
     public Order() {
     }
 
-    public Order(Long id, Integer customerId, Integer price, Date startDate, Date endDate, List<OrderItem> orderItemEntities) {
-        this.id = id;
+    public Order(Integer customerId, Integer price, Date startDate, Date endDate, List<OrderItem> orderItemEntities) {
         this.customerId = customerId;
         this.price = price;
         this.startDate = startDate;

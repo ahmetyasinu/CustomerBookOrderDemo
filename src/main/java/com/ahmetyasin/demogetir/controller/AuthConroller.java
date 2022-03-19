@@ -2,10 +2,8 @@ package com.ahmetyasin.demogetir.controller;
 
 
 import com.ahmetyasin.demogetir.auth.TokenManager;
-import com.ahmetyasin.demogetir.entity.User;
 import com.ahmetyasin.demogetir.entity.dto.UserDto;
-import com.ahmetyasin.demogetir.service.Impl.UserServiceImpl;
-import io.swagger.annotations.ApiOperation;
+import com.ahmetyasin.demogetir.user.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

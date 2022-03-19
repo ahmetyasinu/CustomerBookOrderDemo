@@ -1,4 +1,4 @@
-package com.ahmetyasin.demogetir.service.Impl;
+package com.ahmetyasin.demogetir.user;
 
 import com.ahmetyasin.demogetir.entity.Order;
 import com.ahmetyasin.demogetir.entity.dto.OrderDTO;
@@ -11,11 +11,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional(readOnly = true)
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
@@ -48,15 +50,17 @@ public class OrderServiceImpl implements OrderService {
         return MapperHelper.convert(order, OrderDTO.class);
     }
 
+    @Transactional
     @Override
-    public void save(OrderDTO orderDTO) {
+    public OrderDTO save(OrderDTO orderDTO) {
         logger.info("save all {} datas.", Order.class);
 
         Order order = MapperHelper.convertBack(orderDTO, Order.class);
         repository.save(order);
-
+        return orderDTO;
     }
 
+    @Transactional
     @Override
     public void deleteById(Long id) {
         logger.info("delete all {} datas.", Order.class);
@@ -70,6 +74,7 @@ public class OrderServiceImpl implements OrderService {
 
         return MapperHelper.convertAll(repository.betweenDates(startDate, endDate), OrderDTO.class);
     }
+
     @Override
     public List<StatisticDto> monthlyStatistic(Long id) {
 

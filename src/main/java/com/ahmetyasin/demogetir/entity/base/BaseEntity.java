@@ -14,8 +14,6 @@ import java.util.Date;
 @MappedSuperclass
 @EntityListeners({AuditingEntityListener.class})
 public abstract class BaseEntity<PK extends Serializable> implements Serializable, Entity<PK> {
-	
-	private static final long serialVersionUID = 1L;
 
 	@CreatedBy
 	@Column(name = "CREATED_BY", updatable = false)
@@ -41,6 +39,18 @@ public abstract class BaseEntity<PK extends Serializable> implements Serializabl
 
 	@Transient
 	private boolean newEntity = true;
+
+	@Version
+	@Column(name = "version")
+	private Long version;
+
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
+	}
 
 	public String getCreatedBy() {
 		return createdBy;
