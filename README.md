@@ -1,6 +1,6 @@
-# DemoGetir
+# Demo
 
-Getir Application
+Application
 
 Customer Controller
 • Will persist new customers
